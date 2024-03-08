@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8b4c8c5.css",
-    "main.js": "/static/js/main.10308b24.js",
-    "static/js/787.d4aba7ab.chunk.js": "/static/js/787.d4aba7ab.chunk.js",
-    "static/media/park.png": "/static/media/park.715e29ef04007133dec0.png",
-    "static/media/park_table.png": "/static/media/park_table.ebfb145aa41020edb4ab.png",
-    "static/media/driveway.jpeg": "/static/media/driveway.42f0db42a6c86289c28b.jpeg",
-    "static/media/kitchen_table.jpeg": "/static/media/kitchen_table.194a2b10a550019f6e31.jpeg",
-    "static/media/living_room_table.jpeg": "/static/media/living_room_table.2bd48cb89c0ca5334a06.jpeg",
-    "index.html": "/index.html",
-    "static/media/star.svg": "/static/media/star.0489c6534890a72e8c78cd04ca7667e2.svg",
-    "static/media/eraser.svg": "/static/media/eraser.97baef7512ae429ebdd51724be5c0b47.svg",
-    "static/media/rectangle.svg": "/static/media/rectangle.880820c3a7f4c6eb7860892b7cd9602c.svg",
-    "static/media/pointer.svg": "/static/media/pointer.afc17fcf00c59bcf5cf7c0b01dad0821.svg",
-    "static/media/arrow.svg": "/static/media/arrow.0ccaaa92b2e6112dbd7c9419977f0d0d.svg",
-    "main.a8b4c8c5.css.map": "/static/css/main.a8b4c8c5.css.map",
-    "main.10308b24.js.map": "/static/js/main.10308b24.js.map",
-    "787.d4aba7ab.chunk.js.map": "/static/js/787.d4aba7ab.chunk.js.map"
+    "main.css": "/ClickDiffusion/static/css/main.964e7de6.css",
+    "main.js": "/ClickDiffusion/static/js/main.3fc17795.js",
+    "static/js/787.d4aba7ab.chunk.js": "/ClickDiffusion/static/js/787.d4aba7ab.chunk.js",
+    "static/media/park.png": "/ClickDiffusion/static/media/park.715e29ef04007133dec0.png",
+    "static/media/park_table.png": "/ClickDiffusion/static/media/park_table.ebfb145aa41020edb4ab.png",
+    "static/media/driveway.jpeg": "/ClickDiffusion/static/media/driveway.42f0db42a6c86289c28b.jpeg",
+    "static/media/kitchen_table.jpeg": "/ClickDiffusion/static/media/kitchen_table.194a2b10a550019f6e31.jpeg",
+    "static/media/living_room_table.jpeg": "/ClickDiffusion/static/media/living_room_table.2bd48cb89c0ca5334a06.jpeg",
+    "index.html": "/ClickDiffusion/index.html",
+    "static/media/star.svg": "/ClickDiffusion/static/media/star.0489c6534890a72e8c78cd04ca7667e2.svg",
+    "static/media/eraser.svg": "/ClickDiffusion/static/media/eraser.97baef7512ae429ebdd51724be5c0b47.svg",
+    "static/media/rectangle.svg": "/ClickDiffusion/static/media/rectangle.880820c3a7f4c6eb7860892b7cd9602c.svg",
+    "static/media/pointer.svg": "/ClickDiffusion/static/media/pointer.afc17fcf00c59bcf5cf7c0b01dad0821.svg",
+    "static/media/arrow.svg": "/ClickDiffusion/static/media/arrow.0ccaaa92b2e6112dbd7c9419977f0d0d.svg",
+    "main.964e7de6.css.map": "/ClickDiffusion/static/css/main.964e7de6.css.map",
+    "main.3fc17795.js.map": "/ClickDiffusion/static/js/main.3fc17795.js.map",
+    "787.d4aba7ab.chunk.js.map": "/ClickDiffusion/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8b4c8c5.css",
-    "static/js/main.10308b24.js"
+    "static/css/main.964e7de6.css",
+    "static/js/main.3fc17795.js"
   ]
 }
