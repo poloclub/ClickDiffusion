@@ -1,0 +1,314 @@
+
+
+.custom-layout{
+	position: absolute;
+	inset: 0px;
+	pointer-events: none;
+	z-index: 200 !important;
+}
+
+.loading-overlay-loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(225, 225, 225, 0.806);
+    z-index: 500 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay-not-loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222, 222, 222, 0.806);
+    /* z-index: 500 !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-gif {
+    width: 100px;
+    height: 100px; 
+    margin: auto;
+}
+
+/* 
+.loading-overlay .loading{
+    z-index: 500 !important; 
+} */
+
+
+/* .loading-overlay .loading{
+    background-color: rgba(179, 179, 179, 0.806);
+    z-index: 500 !important; 
+}
+
+.loading-overlay .not-loading {
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+} */
+
+/* .tldraw__editor-with-inset-canvas .tl-canvas {
+	position: absolute;
+	inset: 100px 200px 100px 100px;
+} */
+
+.tldraw-editor {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+}
+
+.tl-canvas {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+}
+
+.vertical-bar {
+    top: 0px;
+    height:40px; /* Set the height as per your requirement */
+    width: 5px; /* Set the width of the vertical bar */
+    padding:0 1px;
+    background-color: #000000; /* Set the background color of the vertical bar */
+    margin: 0 10px; 
+    display: inline;
+}
+
+/* 
+.tl-canvas {
+    /* inset: 100px; */
+/*  */
+
+/* .tldraw-editor .tl-canvas{ */
+    /* position: flex; */
+    /* position: absolute; */
+    /* height: 750px; */
+    /* width: 800px; */
+    /* inset: 150px 75px 150px 125px; */
+    /* inset: 85px 150px 75px 150px; */
+/* } */
+
+/* .tldraw-editor{
+    position: absolute;
+    width: 800px;
+    height: 800px;
+	/* inset: 150px 150px 150px 150px; */
+    /* inset: 85px 150px 75px 150px; */
+
+/* .tl-canvas .tldraw-editor{
+    position: absolute;
+	inset: 110px 150px 125px 150px;
+} */
+
+/* .tldraw-editor{
+    height: 800px;
+    width: 800px;
+    /* inset: 150px 75px 150px 125px; */
+/* }  */
+
+.vertical-bar {
+    width: 1px;
+    background-color: rgb(210, 207, 207);
+}
+
+.custom-toolbar {
+    width: 250px;
+    position: relative;
+    /* top: -100px; */
+    border-radius: 10px;
+    border: 0.5px solid #CACACA;
+    background: #F8F8F8;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    margin: 10px auto;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.show-layout-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #CACACA;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.show-layout-button .active{
+    background-color: #007EFF;
+    color: white;
+}
+
+.show-layout-button .inactive{
+    background-color: #CACACA;
+    color: black;
+}
+
+.show-layout-button:hover {
+    cursor: pointer;
+    background-color: #CACACA;
+}
+
+.custom-tool {
+	/* pointer-events: all; */
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px;
+}
+
+.custom-tool:hover {
+    cursor: pointer;
+    background-color: #CACACA;
+}
+
+/* .input-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.input-box-button{
+	/* pointer-events: all; */
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border-radius: 50px;
+    margin: 15px auto;
+    background-color: #007EFF;
+    color: white;
+    font-size: 24px;
+    padding: auto;
+    line-height: 40px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); 
+}
+
+.input-box-button:hover {
+    cursor: pointer;
+    background-color: #0066CC;
+}
+
+.input-box-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    bottom: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 500;
+}
+
+.input-box {
+    margin: 0 auto;
+	/* pointer-events: all; */
+    position: relative;
+    width: 450px;
+    height: 60px;
+    padding: 10px;
+    line-height: 40px;
+    margin-top: 15px;
+    padding-left: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0.5px solid #CACACA;
+    background: #F8F8F8;
+    color: black;
+    text-align: left;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    overflow-x: auto;
+}
+.input-box::-webkit-scrollbar {
+    display: none;
+}
+
+/* .input-box-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    bottom: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 500;
+} */
+
+.input-box:empry:before {
+    content: attr(data-placeholder);
+    color: grey;
+}
+
+.star-icon {
+    background: url(tool_icons/inactive/star.svg);
+}
+
+.rectangle-icon {
+    background: url(tool_icons/inactive/rectangle.svg);
+}
+
+.arrow-icon {
+    background: url(tool_icons/inactive/arrow.svg);
+}
+
+.left-container {
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+  
+.background-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Equal spacing between elements */
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+}
+  
+.background-bar-item {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%; 
+    border: 2px solid #000000;
+    margin-bottom: 15px;
+    /* pointer-events: all; */
+    cursor: pointer; 
+}
+  
+.background-bar-item.inactive {
+    opacity: 0.5;
+}
+  
+.background-bar-item.active {
+    opacity: 1.0;
+}
+  
+.background-bar-item:hover {
+    opacity: 1.0;
+}
+
+.loading {
+    pointer-events: none;
+}
+
+.not-loading {
+    pointer-events: all;
+}

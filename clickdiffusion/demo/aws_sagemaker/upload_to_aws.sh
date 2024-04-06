@@ -1,0 +1,1 @@
+aws s3 cp model.tar.gz $s3_location

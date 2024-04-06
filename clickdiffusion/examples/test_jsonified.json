@@ -1,0 +1,303 @@
+{
+    "examples": [
+        {
+            "type": "text",
+            "instruction": "Move the car to the left of the tree.",
+            "input_scene_graph": {
+                "prompt": "A car and a tree.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "car",
+                        "box": {
+                            "x": 0.65,
+                            "y": 0.6,
+                            "width": 0.3,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.3,
+                            "width": 0.2,
+                            "height": 0.6
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A car and a tree.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "car",
+                        "box": {
+                            "x": 0.05,
+                            "y": 0.6,
+                            "width": 0.3,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.3,
+                            "width": 0.2,
+                            "height": 0.6
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move the birds in {'x': 0.12, 'y': 0.55, 'width': 0.23, 'height': 0.20} to the sky.",
+            "input_scene_graph": {
+                "prompt": "A group of birds in a mountain landscape with a lake.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "lake",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.5,
+                            "width": 0.7,
+                            "height": 0.4
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "a mountain landscape",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "sky",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.15,
+                            "y": 0.6,
+                            "width": 0.05,
+                            "height": 0.05
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.25,
+                            "y": 0.6,
+                            "width": 0.05,
+                            "height": 0.05
+                        }
+                    },
+                    {
+                        "unique_id": 5,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.22,
+                            "y": 0.7,
+                            "width": 0.06,
+                            "height": 0.05
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A group of birds in a mountain landscape with a lake.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "lake",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.5,
+                            "width": 0.7,
+                            "height": 0.4
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "a mountain landscape",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "sky",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.15,
+                            "y": 0.6,
+                            "width": 0.05,
+                            "height": 0.05
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.25,
+                            "y": 0.6,
+                            "width": 0.05,
+                            "height": 0.05
+                        }
+                    },
+                    {
+                        "unique_id": 5,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.22,
+                            "y": 0.7,
+                            "width": 0.06,
+                            "height": 0.05
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Add a dog under {'x': 0.5, 'y': 0.5}.",
+            "input_scene_graph": {
+                "prompt": "A dog in a kitchen under the table.",
+                "boxes": []
+            },
+            "output_scene_graph": {
+                "prompt": "A dog in a kitchen under the table.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.3,
+                            "y": 0.6,
+                            "width": 0.5,
+                            "height": 0.4
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move {'x': 0.1, 'y': 0.5, 'width': 0.3, 'height': 0.5} to {'x': 0.65, 'y': 0.4} and make it sit.",
+            "input_scene_graph": {
+                "prompt": "A dog in a park by a tree. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.12,
+                            "y": 0.4,
+                            "width": 0.3,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.35,
+                            "y": 0.1,
+                            "width": 0.25,
+                            "height": 0.8
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A dog in a park by a tree. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "a sitting dog",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.4,
+                            "width": 0.3,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.35,
+                            "y": 0.1,
+                            "width": 0.25,
+                            "height": 0.8
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Resize the truck to {'x': 0.1, 'y': 0.5, 'width': 0.3, 'height': 0.5}.",
+            "input_scene_graph": {
+                "prompt": "A red truck in a driveway. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "truck",
+                        "box": {
+                            "x": 0.25,
+                            "y": 0.3,
+                            "width": 0.4,
+                            "height": 0.4
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A red truck in a driveway. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "truck",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.5,
+                            "width": 0.3,
+                            "height": 0.5
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

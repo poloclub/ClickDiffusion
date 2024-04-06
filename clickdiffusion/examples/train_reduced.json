@@ -1,0 +1,1269 @@
+{
+    "examples": [
+        {
+            "type": "text",
+            "instruction": "Move the dog onto the car.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Move. \n Which objects are being moved?\n A: Dog.\n Q:Which objects are not being moved? \n A: Car, A street \n Q: Where are they being moved to? \n A: Onto the car.\n Q: Does the size need to change? \n A: No. Is an objects apperance changing? No.",
+            "input_scene_graph": {
+                "prompt": "A dog standing by a car.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.75,
+                            "y": 0.8,
+                            "width": 0.2,
+                            "height": 0.2
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "car",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.65,
+                            "width": 0.6,
+                            "height": 0.35
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "A street",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A dog standing on a car. ",
+                "boxes": [
+                    {
+                        "unique_id": 1,
+                        "name": "car",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.65,
+                            "width": 0.6,
+                            "height": 0.35
+                        }
+                    },
+                    {
+                        "unique_id": 0,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.35,
+                            "y": 0.45,
+                            "width": 0.2,
+                            "height": 0.2
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "A street",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Add a car ",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Add. \n Q: Which object is being added? \n A: Car. \n Q: Where is the object being added? \n A: To the left of the dog",
+            "input_scene_graph": {
+                "prompt": "A dog. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.75,
+                            "y": 0.8,
+                            "width": 0.2,
+                            "height": 0.2
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A car and a dog. ",
+                "boxes": [
+                    {
+                        "unique_id": 1,
+                        "name": "car",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.65,
+                            "width": 0.6,
+                            "height": 0.35
+                        }
+                    },
+                    {
+                        "unique_id": 0,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.35,
+                            "y": 0.45,
+                            "width": 0.2,
+                            "height": 0.2
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Make the plate black.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Change apperance. \n Q: Which object's appearance is changing?\n A: The Plate.\n Q:What is it changing to? \n A: Black",
+            "input_scene_graph": {
+                "prompt": "A white plate on a table.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "white plate",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.8,
+                            "width": 0.6,
+                            "height": 0.2
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A black plate on a table. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "black plate",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.8,
+                            "width": 0.6,
+                            "height": 0.2
+                        }
+                    }
+                ]
+            }
+        }, 
+        {
+            "type": "both",
+            "instruction": "Make {'x': 0.1, 'y': 0.65, 'width': 0.6, 'height': 0.35} green.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Change appearance. \n Q: Which object's appearance is changing?\n A: The car. \n Q:What is it changing to? \n A: Green",
+            "input_scene_graph": {
+                "prompt": "A dog standing by a car.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.75,
+                            "y": 0.8,
+                            "width": 0.2,
+                            "height": 0.2
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "car",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.65,
+                            "width": 0.6,
+                            "height": 0.35
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "A street",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A dog standing by a green car. ",
+                "boxes": [
+                    {
+                        "unique_id": 1,
+                        "name": "green car",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.65,
+                            "width": 0.6,
+                            "height": 0.35
+                        }
+                    },
+                    {
+                        "unique_id": 0,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.75,
+                            "y": 0.8,
+                            "width": 0.2,
+                            "height": 0.2
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "A street",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Remove the bird on the right. ",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Remove \n Q: Which objects are being removed?\n A: The bird at {'x': 0.15, 'y': 0.75, 'width': 0.1, 'height': 0.1}. ",
+            "input_scene_graph": {
+                "prompt": "A bird and a bird flying in a back yard. A tree with branches. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.3,
+                            "width": 0.2,
+                            "height": 0.7
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "branches",
+                        "box": {
+                            "x": 0.3,
+                            "y": 0.05,
+                            "width": 0.4,
+                            "height": 0.25
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.15,
+                            "y": 0.75,
+                            "width": 0.1,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.05,
+                            "y": 0.85,
+                            "width": 0.1,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "A back yard",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with leaves. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.3,
+                            "width": 0.2,
+                            "height": 0.7
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "branches",
+                        "box": {
+                            "x": 0.3,
+                            "y": 0.05,
+                            "width": 0.4,
+                            "height": 0.25
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.05,
+                            "y": 0.85,
+                            "width": 0.1,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "A back yard",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move {'x': 0.0, 'y': 0.7, 'width': 0.3, 'height': 0.3} into the branches. ",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Move \n Q: Which objects are being moved?\n A: Bird at {'x': 0.0, 'y': 0.7, 'width': 0.3, 'height': 0.3}.\n Q: Where are they being moved to? \n A: Near the branches.\n ",
+            "input_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with branches. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.3,
+                            "width": 0.2,
+                            "height": 0.7
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "branches",
+                        "box": {
+                            "x": 0.3,
+                            "y": 0.05,
+                            "width": 0.4,
+                            "height": 0.25
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.15,
+                            "y": 0.75,
+                            "width": 0.1,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.05,
+                            "y": 0.85,
+                            "width": 0.1,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "A back yard",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with leaves. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.3,
+                            "width": 0.2,
+                            "height": 0.7
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "branches",
+                        "box": {
+                            "x": 0.3,
+                            "y": 0.05,
+                            "width": 0.4,
+                            "height": 0.25
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.45,
+                            "y": 0.1,
+                            "width": 0.1,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.55,
+                            "y": 0.2,
+                            "width": 0.1,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "A back yard",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move {'x': 0.1, 'y': 0.7, 'width': 0.15, 'height': 0.15} into the branches. ",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Move \n Q:Which object is being moved? \n A: The bird at {'x': 0.1, 'y': 0.7, 'width': 0.15, 'height': 0.15}\n Q: Where are they being moved to? \n A: Near the branches.\n",
+            "input_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with branches. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.3,
+                            "width": 0.2,
+                            "height": 0.7
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "branches",
+                        "box": {
+                            "x": 0.3,
+                            "y": 0.05,
+                            "width": 0.4,
+                            "height": 0.25
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.7,
+                            "width": 0.15,
+                            "height": 0.15
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "A back yard",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with branches. ",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "tree",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.3,
+                            "width": 0.2,
+                            "height": 0.7
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "branches",
+                        "box": {
+                            "x": 0.3,
+                            "y": 0.05,
+                            "width": 0.4,
+                            "height": 0.25
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "bird",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.1,
+                            "width": 0.15,
+                            "height": 0.15
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "A back yard",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Move the cat to the left of the dog.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Move \n Q: Which objects are being moved?\n A: Cat. \n Q: Where are they being moved to? \n A: Left of the dog.\n ",
+            "input_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Remove the dogs in {'x': 0.25, 'y': 0.55, 'width': 0.5, 'height' 0.25}. ",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Remove \n Q: Which objects are being removed?\n A: the dogs in {'x': 0.25, 'y': 0.55, 'width': 0.5, 'height' 0.25}. \n Q: which objects are not being removed? \n A: The wall, the sky, the park, and a dog. ",
+            "input_scene_graph": {
+                "prompt": "Dogs standing in a park by a wall.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "wall",
+                        "box": {
+                            "x": 0.5,
+                            "y": 0.6,
+                            "width": 0.1,
+                            "height": 0.4
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "golden retriever",
+                        "box": {
+                            "x": 0.3,
+                            "y": 0.6,
+                            "width": 0.15,
+                            "height": 0.15
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.7,
+                            "width": 0.15,
+                            "height": 0.15
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "border collie",
+                        "box": {
+                            "x": 0.5,
+                            "y": 0.6,
+                            "width": 0.15,
+                            "height": 0.15
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "sky",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 5,
+                        "name": "A park",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "Dogs standing in a park by a wall.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "wall",
+                        "box": {
+                            "x": 0.5,
+                            "y": 0.6,
+                            "width": 0.1,
+                            "height": 0.4
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.7,
+                            "width": 0.15,
+                            "height": 0.15
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "sky",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 5,
+                        "name": "A park",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Remove the books in {'x': 0.1, 'y': 0.4, 'width': 0.35, 'height': 0.5}.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Remove \n Q: Which objects are being removed?\n A: Books in {'x': 0.1, 'y': 0.4, 'width': 0.35, 'height': 0.5}.\n Q: which objects are not being removed? \n A: The green book, the red book, and the table.",
+            "input_scene_graph": {
+                "prompt": "Books on a table.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "table",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.9,
+                            "width": 1.0,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "book",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.4,
+                            "width": 0.1,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "black book",
+                        "box": {
+                            "x": 0.22,
+                            "y": 0.4,
+                            "width": 0.1,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "book",
+                        "box": {
+                            "x": 0.34,
+                            "y": 0.4,
+                            "width": 0.1,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "green book",
+                        "box": {
+                            "x": 0.47,
+                            "y": 0.4,
+                            "width": 0.2,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "unique_id": 5,
+                        "name": "red book",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.4,
+                            "width": 0.15,
+                            "height": 0.5
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "Books on a table.",
+                "boxes": [
+                    
+                    {
+                        "unique_id": 0,
+                        "name": "table",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.9,
+                            "width": 1.0,
+                            "height": 0.1
+                        }
+                    },
+                    {
+                        "unique_id": 4,
+                        "name": "green book",
+                        "box": {
+                            "x": 0.47,
+                            "y": 0.4,
+                            "width": 0.2,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "unique_id": 5,
+                        "name": "red book",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.4,
+                            "width": 0.15,
+                            "height": 0.5
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Remove the fence.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Remove \n Q: Which objects are being removed?\n A: Fence. \n Q: which objects are not being removed? \n A: The dog, the sky, the park. ",
+            "input_scene_graph": {
+                "prompt": "A dog standing in a park by a fence.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "fence",
+                        "box": {
+                            "x": 0.5,
+                            "y": 0.6,
+                            "width": 0.1,
+                            "height": 0.4
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.7,
+                            "width": 0.15,
+                            "height": 0.15
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "sky",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "A park",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "Dogs standing in a park.",
+                "boxes": [
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.7,
+                            "width": 0.15,
+                            "height": 0.15
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "sky",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 3,
+                        "name": "A park",
+                        "box": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "width": 1.0,
+                            "height": 1.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Shift the dog left.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Move \n Q: Which objects are being moved?\n A: Dog. \n Q: Where are they being moved to? \n A: To the left.\n ",
+            "input_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Remove {'x': 0.15, 'y': 0.55, 'width': 0.33, 'height': 0.42} ",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Remove \n Q: Which objects are being removed?\n A: Bike. \n Q: which objects are not being removed? \n A: The bush.",
+            "input_scene_graph": {
+                "prompt": "A bike and a bush.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "bike",
+                        "box": {
+                            "x": 0.2,
+                            "y": 0.6,
+                            "width": 0.3,
+                            "height": 0.4
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "bush",
+                        "box": {
+                            "x": 0.6,
+                            "y": 0.55,
+                            "width": 0.4,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A bush. ",
+                "boxes": [
+                    {
+                        "unique_id": 1,
+                        "name": "bush",
+                        "box": {
+                            "x": 0.6,
+                            "y": 0.55,
+                            "width": 0.4,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Swap the cat and the dog.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Move \n Q: Which objects are being moved?\n A: Cat and Dog. \n Q: Where are they being moved to? \n A: Their positions are being swapped.\n ",
+            "input_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Add a white cat at {'x': 0.75, 'y': 0.3, 'width': 0.25, 'height': 0.25}.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Add \n Q: Which objects are being added?\n A: White cat at {'x': 0.75, 'y': 0.3, 'width': 0.25, 'height': 0.25}. ",
+            "input_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat, a white cat, and a dog.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.4,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "white cat",
+                        "box": {
+                            "x": 0.75,
+                            "y": 0.3,
+                            "width": 0.25,
+                            "height": 0.25
+                        }
+                    }
+    
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move {'x': 0.05, 'y': 0.3, 'width': 0.25, 'height': 0.5} to {'x': 0.75, 'y': 0.3} and make it a sheep.",
+            "chain_of_thought": "Q: Which operation is being performed? A: Move and Change Appearance Q: Which objects are being moved? A: Cat at {'x': 0.05, 'y': 0.3, 'width': 0.25, 'height': 0.5} Q: Where are they being moved to? A: {'x': 0.75, 'y': 0.3} Q: How is the appearance changing? A: To a sheep.",
+            "input_scene_graph": {
+                "prompt": "Cats on the beach.",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "white cat",
+                        "box": {
+                            "x": 0.05,
+                            "y": 0.3,
+                            "width": 0.25,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "black cat",
+                        "box": {
+                            "x": 0.35,
+                            "y": 0.65,
+                            "width": 0.2,
+                            "height": 0.31
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "white cat",
+                        "box": {
+                            "x": 0.35,
+                            "y": 0.65,
+                            "width": 0.2,
+                            "height": 0.31
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "Cats and a sheep on the beach.",
+                "boxes": [
+                    {
+                        "unique_id": 3,
+                        "name": "sheep",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.3,
+                            "width": 0.25,
+                            "height": 0.5
+                        }
+                    },
+                    {
+                        "name": "black cat",
+                        "box": {
+                            "x": 0.35,
+                            "y": 0.65,
+                            "width": 0.2,
+                            "height": 0.31
+                        }
+                    },
+                    {
+                        "name": "white cat",
+                        "box": {
+                            "x": 0.35,
+                            "y": 0.65,
+                            "width": 0.2,
+                            "height": 0.31
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Remove the cat in {'x': 0.35, 'y': 0.5, 'width': 0.6, 'height': 0.5}.",
+            "chain_of_thought": "Q: Which operation is being performed? \n A: Remove \n Which objects are being reoved?\n A: Cat in {'x': 0.35, 'y': 0.5, 'width': 0.6, 'height': 0.5} \n Q: Which objects are not being removed? \n A: The othe cat and the dog.",
+            "input_scene_graph": {
+                "prompt": "Two cats and a dog",
+                "boxes": [
+                    {
+                        "unique_id": 0,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.7,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.5,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog",
+                "boxes": [
+                    {
+                        "unique_id": 1,
+                        "name": "dog",
+                        "box": {
+                            "x": 0.5,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    },
+                    {
+                        "unique_id": 2,
+                        "name": "cat",
+                        "box": {
+                            "x": 0.1,
+                            "y": 0.6,
+                            "width": 0.2,
+                            "height": 0.3
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

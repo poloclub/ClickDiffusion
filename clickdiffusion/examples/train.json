@@ -1,0 +1,240 @@
+{
+    "examples": [
+        {
+            "type": "text",
+            "instruction": "Move the dog onto the car.",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Dog.\n Q:Which objects are not being moved? \n A: Car, A street \n Q: Where are they being moved to? \n A: Onto the car.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A dog standing by a car.",
+                "boxes": [
+                    {"name": "dog", "box": [0.75, 0.8, 0.95, 1.0]},
+                    {"name": "car", "box": [0.1, 0.65, 0.7, 1.0]},
+                    {"name": "A street", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A dog standing on a car. ",
+                "boxes": [
+                    {"name": "car", "box": [0.1, 0.65, 0.7, 1.0]},
+                    {"name": "dog", "box": [0.35, 0.45, 0.55, 0.65]},
+                    {"name": "A street", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Remove the bird on the right. ",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Bird.\n Q:Which objects are not being moved? \n A: Tree, branches, back yard, the bird on the left \n Q: Where are they being moved to? \n A: Removed.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with branches. ",
+                "boxes": [
+                    {"name": "tree", "box": [0.4, 0.3, 0.6, 1.0]},
+                    {"name": "branches", "box": [0.3, 0.05, 0.7, 0.3]},
+                    {"name": "bird", "box": [0.15, 0.75, 0.25, 0.85]},
+                    {"name": "bird", "box": [0.05, 0.85, 0.15, 0.95]},
+                    {"name": "A back yard", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with leaves. ",
+                "boxes": [
+                    {"name": "tree", "box": [0.4, 0.3, 0.6, 1.0]},
+                    {"name": "branches", "box": [0.3, 0.05, 0.7, 0.3]},
+                    {"name": "bird", "box": [0.45, 0.1, 0.55, 0.2]},
+                    {"name": "A back yard", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move [0.0, 0.7, 0.3, 1.0] into the branches. ",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Bird.\n Q:Which objects are not being moved? \n A: Tree, branches, back yard \n Q: Where are they being moved to? \n A: Near the branches.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with branches. ",
+                "boxes": [
+                    {"name": "tree", "box": [0.4, 0.3, 0.6, 1.0]},
+                    {"name": "branches", "box": [0.3, 0.05, 0.7, 0.3]},
+                    {"name": "bird", "box": [0.15, 0.75, 0.25, 0.85]},
+                    {"name": "bird", "box": [0.05, 0.85, 0.15, 0.95]},
+                    {"name": "A back yard", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with leaves. ",
+                "boxes": [
+                    {"name": "tree", "box": [0.4, 0.3, 0.6, 1.0]},
+                    {"name": "branches", "box": [0.3, 0.05, 0.7, 0.3]},
+                    {"name": "bird", "box": [0.45, 0.1, 0.55, 0.2]},
+                    {"name": "bird", "box": [0.55, 0.2, 0.65, 0.3]},
+                    {"name": "A back yard", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move [0.1, 0.7, 0.25, 0.85] into the branches. ",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Bird.\n Q:Which objects are not being moved? \n A: Tree, branches, back yard. \n Q: Where are they being moved to? \n A: Near the branches.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with branches. ",
+                "boxes": [
+                    {"name": "tree", "box": [0.4, 0.3, 0.6, 1.0]},
+                    {"name": "branches", "box": [0.3, 0.05, 0.7, 0.3]},
+                    {"name": "bird", "box": [0.1, 0.7, 0.25, 0.85]},
+                    {"name": "A back yard", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A bird flying in a back yard. A tree with branches. ",
+                "boxes": [
+                    {"name": "tree", "box": [0.4, 0.3, 0.6, 1.0]},
+                    {"name": "branches", "box": [0.3, 0.05, 0.7, 0.3]},
+                    {"name": "bird", "box": [0.4, 0.1, 0.55, 0.25]},
+                    {"name": "A back yard", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Move the cat to the left of the dog.",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Cat.\n Q:Which objects are not being moved? \n A: Dog. \n Q: Where are they being moved to? \n A: Left of the dog.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {"name": "cat", "box": [0.7, 0.6, 0.9, 0.9]},
+                    {"name": "dog", "box": [0.4, 0.6, 0.6, 0.9]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {"name": "cat", "box": [0.1, 0.6, 0.3, 0.9]},
+                    {"name": "dog", "box": [0.4, 0.6, 0.6, 0.9]}
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move the dogs [0.05, 0.55, 0.5, 0.9] to the right of the wall. ",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Dogs. \n Q:Which objects are not being moved? \n A: Wall, sky, park \n Q: Where are they being moved to? \n A: Right of the wall.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "Dogs standing in a park by a wall.",
+                "boxes": [
+                    {"name": "wall", "box": [0.5, 0.6, 0.6, 1.0]},
+                    {"name": "dog", "box": [0.3, 0.6, 0.45, 0.75]},
+                    {"name": "dog", "box": [0.1, 0.7, 0.25, 0.85]},
+                    {"name": "sky", "box": [0.0, 0.0, 1.0, 0.3]},
+                    {"name": "A park", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "Dogs standing in a park by a wall.",
+                "boxes": [
+                    {"name": "wall", "box": [0.5, 0.6, 0.6, 1.0]},
+                    {"name": "dog", "box": [0.8, 0.6, 0.95, 0.75]},
+                    {"name": "dog", "box": [0.65, 0.7, 0.8, 0.85]},
+                    {"name": "sky", "box": [0.0, 0.0, 1.0, 0.3]},
+                    {"name": "A park", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Remove the fence.",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Fence. \n Q:Which objects are not being moved? \n A: Dog, sky, park\n Q: Where are they being moved to? \n A: Removed.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A dog standing in a park by a fence.",
+                "boxes": [
+                    {"name": "fence", "box": [0.5, 0.6, 0.6, 1.0]},
+                    {"name": "dog", "box": [0.1, 0.7, 0.25, 0.85]},
+                    {"name": "sky", "box": [0.0, 0.0, 1.0, 0.3]},
+                    {"name": "A park", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "Dogs standing in a park.",
+                "boxes": [
+                    {"name": "dog", "box": [0.1, 0.7, 0.25, 0.85]},
+                    {"name": "sky", "box": [0.0, 0.0, 1.0, 0.3]},
+                    {"name": "A park", "box": [0.0, 0.0, 1.0, 1.0]}
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Shift the dog left.",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Dog. \n Q:Which objects are not being moved? \n A: Cat \n Q: Where are they being moved to? \n A: To the left.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {"name": "cat", "box": [0.7, 0.6, 0.9, 0.9]},
+                    {"name": "dog", "box": [0.4, 0.6, 0.6, 0.9]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {"name": "cat", "box": [0.7, 0.6, 0.9, 0.9]},
+                    {"name": "dog", "box": [0.1, 0.6, 0.3, 0.9]}
+                ]
+            }
+        },
+        {
+            "type": "text",
+            "instruction": "Swap the cat and the dog.",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Cat and Dog. \n Q:Which objects are not being moved? \n A: None \n Q: Where are they being moved to? \n A: Their positions are being swapped.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {"name": "cat", "box": [0.7, 0.6, 0.9, 0.9]},
+                    {"name": "dog", "box": [0.4, 0.6, 0.6, 0.9]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {"name": "cat", "box": [0.4, 0.6, 0.6, 0.9]},
+                    {"name": "dog", "box": [0.7, 0.6, 0.9, 0.9]}
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move [0.4, 0.6, 0.6, 0.9] to the left.",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Dog. \n Q:Which objects are not being moved? \n A: Cat \n Q: Where are they being moved to? \n A: The left.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {"name": "cat", "box": [0.7, 0.6, 0.9, 0.9]},
+                    {"name": "dog", "box": [0.4, 0.6, 0.6, 0.9]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog.",
+                "boxes": [
+                    {"name": "cat", "box": [0.7, 0.6, 0.9, 0.9]},
+                    {"name": "dog", "box": [0.1, 0.6, 0.3, 0.9]}
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Remove the cat in [0.35, 0.5, 0.95, 1.0].",
+            "chain_of_thought": "Q: Which objects are being moved?\n A: Cat. \n Q:Which objects are not being moved? \n A: The other cat \n Q: Where are they being moved to? \n A: Removed.\n Q: Does the size need to change? \n A: No. ",
+            "input_scene_graph": {
+                "prompt": "Two cats and a dog",
+                "boxes": [
+                    {"name": "cat", "box": [0.7, 0.6, 0.9, 0.9]},
+                    {"name": "dog", "box": [0.5, 0.6, 0.7, 0.9]},
+                    {"name": "cat", "box": [0.1, 0.6, 0.3, 0.9]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A cat and a dog",
+                "boxes": [
+                    {"name": "dog", "box": [0.5, 0.6, 0.7, 0.9]},
+                    {"name": "cat", "box": [0.1, 0.6, 0.3, 0.9]}
+                ]
+            }
+        }
+    ]
+}

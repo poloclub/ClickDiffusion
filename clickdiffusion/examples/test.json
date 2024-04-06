@@ -1,0 +1,48 @@
+{
+    "examples": [
+        {
+            "type": "text",
+            "instruction": "Move the car to the left of the tree.",
+            "input_scene_graph": {
+                "prompt": "A car and a tree.",
+                "boxes": [
+                    {"name": "car", "box": [0.65, 0.6, 0.95, 0.9]},
+                    {"name": "tree", "box": [0.4, 0.3, 0.6, 0.9]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A car and a tree.",
+                "boxes": [
+                    {"name": "car", "box": [0.05, 0.6, 0.35, 0.9]},
+                    {"name": "tree", "box": [0.4, 0.3, 0.6, 0.9]}
+                ]
+            }
+        },
+        {
+            "type": "both",
+            "instruction": "Move the birds in [0.12, 0.55, 0.35, 0.75] to the sky.",
+            "input_scene_graph": {
+                "prompt": "A group of birds in a mountain landscape with a lake.",
+                "boxes": [
+                    {"name": "lake", "box": [0.1, 0.5, 0.8, 0.9]},
+                    {"name": "a mountain landscape", "box": [0.0, 0.0, 1.0, 1.0]},
+                    {"name": "sky", "box": [0.0, 0.0, 1.0, 0.3]},
+                    {"name": "bird", "box": [0.15, 0.6, 0.2, 0.65]},
+                    {"name": "bird", "box": [0.25, 0.6, 0.3, 0.65]},
+                    {"name": "bird", "box": [0.22, 0.7, 0.28, 0.75]}
+                ]
+            },
+            "output_scene_graph": {
+                "prompt": "A group of birds in a mountain landscape with a lake.",
+                "boxes": [
+                    {"name": "lake", "box": [0.1, 0.5, 0.8, 0.9]},
+                    {"name": "a mountain landscape", "box": [0.0, 0.0, 1.0, 1.0]},
+                    {"name": "sky", "box": [0.0, 0.0, 1.0, 0.3]},
+                    {"name": "bird", "box": [0.15, 0.6, 0.2, 0.65]},
+                    {"name": "bird", "box": [0.25, 0.6, 0.3, 0.65]},
+                    {"name": "bird", "box": [0.22, 0.7, 0.28, 0.75]}
+                ]
+            }
+        }
+    ]
+}

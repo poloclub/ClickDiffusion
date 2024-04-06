@@ -1,0 +1,4 @@
+clickdiffusion/demo/aws_sagemaker/models
+node_modules/
+clickdiffusion/demo/react_frontend/build
+__pycache__/
